@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        tr,td{
+            height: 25px;
+            width: 100px;
+            border: 1px black solid;
+        }
+        #burger-menu{
+            background: antiquewhite;
+            border: 1px solid black;
+            width: 200px;
+            height: auto;
+            text-align: center;
+            transition: 1s;
+        }
+        .menu-inner{
+            height: 25px;
+            border: 1px solid black;
+            text-align: center;
+            display: none;
+
+        }
+        #menu{
+            height: 30px;
+            border: 1px solid black;
+        }
+        .slide-effect{
+            position: relative;
+            margin: auto;
+            width: 1280px;
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top:50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s;
+            border-radius: 0 3px 3px 0;
+        }
+        .next{
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover{
+            background-color: rgba(0,0,0, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam atque commodi consequatur cum distinctio
+    ducimus eaque excepturi fuga hic id inventore ipsa laboriosam maiores necessitatibus, nemo nihil obcaecati pariatur,
+    provident quasi quia quisquam quos reiciendis reprehenderit saepe sed suscipit tempore ut velit veniam voluptate?
+    Adipisci dignissimos dolore doloremque fuga illum, nemo perspiciatis provident ratione sequi voluptates. Ad alias,
+    architecto, enim facilis itaque iure labore modi, molestiae nesciunt odit reiciendis vel voluptates? Delectus expedita
+    fugiat minus possimus quia. Aut beatae distinctio expedita nostrum officiis perferendis quo, repellendus rerum sequi vero,
+    voluptatem voluptatum. Aliquam distinctio expedita mollitia odit possimus quae sed voluptatem voluptatum. Aspernatur
+    consectetur corporis, cumque deleniti explicabo in libero maxime non obcaecati omnis porro provident, quas soluta temporibus ut vel!</div>
+<button id = 'btn1'>dissaper</button>;
+<div style="height: 100px"></div>
+
+
+
+<button id = 'btn2'>selfDissapear</button>
+<div style="height: 100px"></div>
+
+
+<label for="input1">
+    <input type="text"  id="input1" placeholder="Введіть ваш вік">
+    <button id="btn3">Перевірити</button>
+</label>
+
+<div style="height: 100px"></div>
+<div id="burger-menu">
+    <div id="menu">MENU</div>
+    <div class="menu-inner">About</div>
+    <div class="menu-inner">Servisec</div>
+    <div class="menu-inner">Blog</div>
+    <div class="menu-inner">Forum</div>
+    <div class="menu-inner">Shop</div>
+</div>
+
+
+<div style="height: 100px"></div>
+
+
+<div id="comments"></div>
+<div style="height: 100px"></div>
+
+<form action=""  name="formOne" >
+    <input type="text" value="" name = 'someTextOne'>
+    <input type="text" value="" name = 'someTextTwo'>
+</form>
+<form action="" name="formTwo" >
+    <input type="text" value="" name="someTextOne">
+    <input type="text" value="" name="someTextTwo">
+</form>
+<button id="btn4">написати в консоль</button>
+
+
+<div style="height: 100px"></div>
+<div id="elem"></div>
+
+
+<div style="height: 100px"></div>
+
+<input type="number" id="rows" name = "rows" placeholder="rows">
+<input type="number" id="cols" name = "cols" placeholder="cols">
+<input type="text"  id = "text-table" name = "text" placeholder="some text">
+<button id = "btn5">створити таблицю</button>
+<div id="table"></div>ж
+
+
+<div style="height: 100px"></div>
+
+<div class="slide-effect">
+    <div id="slides">
+        <img src="1.jpg">
+    </div>
+
+    <a class="prev" onclick="plus(-1)">&#10094</a>
+    <a class="next" onclick="plus(1)">&#10095</a>
+
+</div>
+
+
+<div style="height: 100px"></div>
+
+
+<input type="text" id="check-bad-words">
+<button id ="check-btn" onclick="checkWords()">check</button>
+
+<div style="height: 100px"></div>
+
+<input type="text" id="check-bad-words-two">
+<button id ="check-btn-two" onclick="checkWordsTwo()">check</button>
+
+<div style="height: 100px"></div>
+
+<div id="check">
+    <label for="filter-false">Затерти тру</label>
+    <input  type="checkbox" id="filter-false" value="usersWithAddress[j].status === true">
+    <label for="age-false">Затерти молодших 29</label>
+    <input  type="checkbox" id="age-false" value="usersWithAddress[j].age <= 29">
+    <label for="filter-city">Лишити тільки Київ</label>
+    <input  type="checkbox" id="filter-city" value="usersWithAddress[j].address.city !== 'Kyiv'">
+    <div id="chekboxes"></div>
+
+</div>
+
+<div style="height: 100px"></div>
+
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
