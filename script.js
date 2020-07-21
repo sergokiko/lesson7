@@ -261,18 +261,18 @@ function createDocument(arr, id) {
 createDocument(usersWithAddress);
 
 let div = document.getElementById('check')
-let pHu = div.getElementsByTagName('input');
-
-for (let input of pHu) {
-    input.addEventListener('click',checkIFChecked )
+let inputs = div.getElementsByTagName('input');
+let lengthOfArr = usersWithAddress.length
+for (let input of inputs) {
+    input.addEventListener('click',checkIfChecked )
 }
 
-function checkIFChecked() {
-    let checkFalse = document.getElementById('filter-false')
-    let checkAge = document.getElementById('age-false')
+function checkIfChecked() {
+    let checkFalse = document.getElementById('filter-false');
+    let checkAge = document.getElementById('age-false');
     let checkCity = document.getElementById('filter-city');
 
-    for (let j = 0; j < usersWithAddress.length; j++) {
+    for (let j = 0; j < lengthOfArr; j++) {
         document.getElementById(`${j}`).style.display = 'block'
     }
     check(checkFalse)
@@ -283,7 +283,7 @@ function checkIFChecked() {
 
 function check(elem) {
 if(elem.checked){
-    for (let j = 0; j < usersWithAddress.length; j++) {
+    for (let j = 0; j < lengthOfArr; j++) {
         if (eval(elem.value)) {
             document.getElementById(`${j}`).style.display = 'none'
         }
