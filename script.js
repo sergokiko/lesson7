@@ -97,8 +97,7 @@ for (let comment of userComments) {
 
 
 document.getElementById('btn4').addEventListener('click', () => {
-    console.log(document.forms.formOne);
-    console.log(document.forms.formTwo);
+
 
     console.log(document.forms.formOne.someTextOne.value);
     console.log(document.forms.formOne.someTextTwo.value);
@@ -189,7 +188,7 @@ let arrOfBadWords = ['shit', 'fuck', 'pussy', 'retard', 'f@ck'];
 function checkWords() {
     let inp = document.getElementById('check-bad-words');
     for (let word of arrOfBadWords) {
-        if (word === inp.value.toLowerCase()) {
+        if (inp.value.toLowerCase().includes(word)) {
             alert('Oh! How dare are you?')
         }
     }
@@ -209,7 +208,7 @@ function checkWordsTwo() {
     let text = document.getElementById('check-bad-words-two');
     let result = false;
     for (let word of arrOfBadWords) {
-        result = text.value.includes(word)
+        result = text.value.toLowerCase().includes(word)
         if (result) {
             break
         }
@@ -224,6 +223,10 @@ function checkWordsTwo() {
 //
 // -- создать скрипт, который берет считывает на странице (rules.html) текст и делает сбоку меню-оглавление по всем заголовкам которые есть в тексте.
 //     При клике на пункт оглавления вы должны отправляться к этому пункту в тексте
+//
+//
+//!!!!!Ця задача реалізованна мною  в  файлі rules.html!!!!!
+
 
 
 // -- взять массив пользователей
