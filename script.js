@@ -264,10 +264,10 @@ let div = document.getElementById('check')
 let pHu = div.getElementsByTagName('input');
 
 for (let input of pHu) {
-    input.addEventListener('click',testFunction )
+    input.addEventListener('click',checkIFChecked )
 }
 
-function testFunction() {
+function checkIFChecked() {
     let checkFalse = document.getElementById('filter-false')
     let checkAge = document.getElementById('age-false')
     let checkCity = document.getElementById('filter-city');
@@ -281,7 +281,7 @@ function testFunction() {
 
 }
 
-function check(elem , condition) {
+function check(elem) {
 if(elem.checked){
     for (let j = 0; j < usersWithAddress.length; j++) {
         if (eval(elem.value)) {
